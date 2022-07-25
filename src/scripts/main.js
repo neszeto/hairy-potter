@@ -1,5 +1,7 @@
 import {makePottery} from './PotteryWheel.js'
 import {firePottery} from './Kiln.js'
+import {toSellOrNotToSell} from './PotteryCatalog.js'
+import {usePottery} from './PotteryCatalog.js'
 
 
 
@@ -28,7 +30,19 @@ let firedCup = firePottery(cup, 2200)
 console.log(firedCup)
 
 // Determine which ones should be sold, and their price
+let sellMug = toSellOrNotToSell(firedMug)
+console.log(sellMug)
+let sellPlatter = toSellOrNotToSell(firedPlatter)
+console.log(sellPlatter)
+let sellVase = toSellOrNotToSell(firedVase)
+console.log(sellVase)
+let sellBowl = toSellOrNotToSell(firedBowl)
+console.log(sellBowl)
+let sellCup = toSellOrNotToSell(firedCup)
+console.log(sellCup)
 
+let soldPottery = usePottery()
+console.log(soldPottery)
 
 // Invoke the component function that renders the HTML list
 
